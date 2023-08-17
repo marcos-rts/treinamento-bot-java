@@ -8,6 +8,12 @@ import javax.security.auth.login.LoginException;
 import java.util.EnumSet;
 
 public class DevBot {
+
+    Secret secret = new Secret();
+    String token = secret.getTokenDiscord();
+
     
+
+
 
 }
