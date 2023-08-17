@@ -8,11 +8,13 @@ import javax.security.auth.login.LoginException;
 import java.util.EnumSet;
 
 public class DevBot {
+    public static void main(String[] args) throws LoginException {
+        Secret secret = new Secret();
 
-    Secret secret = new Secret();
-    String token = secret.getTokenDiscord();
+        String token = secret.getTokenDiscord();
 
-    
+        JDA jda = JDABuilder.create( token, EnumSet.allOf(GatewayIntent.class)).build();
+    }
 
 
 
