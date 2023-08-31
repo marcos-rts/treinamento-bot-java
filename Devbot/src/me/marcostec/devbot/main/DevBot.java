@@ -1,6 +1,8 @@
 package me.marcostec.devbot.main;
 
+import me.marcostec.devbot.events.MemberJoin;
 import me.marcostec.devbot.commands.Ping;
+import me.marcostec.devbot.events.MemberLeave;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Guild;
@@ -30,5 +32,8 @@ public class DevBot {
 
 
         jda.addEventListener(new Ping()); // Execução de comando "Ping"
+        jda.addEventListener(new MemberJoin()); // manda a mensagem de novo menbro no canal
+        jda.addEventListener(new MemberLeave()); // manda a mensagem de novo menbro no canal
+        System.out.println("Texto ");
     }
 }
